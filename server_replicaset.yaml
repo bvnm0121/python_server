@@ -18,3 +18,5 @@ spec:
           containers:
           - name: app
             image: kakaru0/python_server:latest
+            ports:
+            - containerPort: 8000
