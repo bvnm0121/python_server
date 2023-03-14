@@ -1,0 +1,24 @@
+apiVerson: apps/v1
+kind: ReplicaSet
+metadata:
+  name: server_replica
+  labels:
+    app: server
+    release: server-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+      release: server-test
+    template:
+      metadata:
+        labels:
+          app: test
+          release: server-test
+        spec:
+          containers:
+          - name: app
+            image: kakaru0/python_server:latest
+            ports:
+            - containerPort: 8000
