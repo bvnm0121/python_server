@@ -1,4 +1,4 @@
-apiVerson: apps/v1
+apiVerson: v1
 kind: ReplicaSet
 metadata:
   name: server_replica
