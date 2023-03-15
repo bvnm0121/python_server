@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: py-test
-        image: kakaru0/python_server:latest
+        image: kakaru0/python-server:latest
         resources:
           limits:
             memory: "64Mi"
