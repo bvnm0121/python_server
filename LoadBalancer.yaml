@@ -8,4 +8,4 @@ spec:
   ports:
     - port: 9000
       targetPort: 9376
-  type: LoabBalancer
+  type: LoadBalancer
