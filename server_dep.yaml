@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: example-5-nginx
-        image: ginx
+        image: nginx
         resources:
           limits:
             memory: "64Mi"
