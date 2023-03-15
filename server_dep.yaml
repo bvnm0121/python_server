@@ -1,22 +1,23 @@
-appVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: py_server
-  lables:
-    app: test
+  name: example-5-nginx
 spec:
-  replicas: 2
+  replicas: 3
   selector:
-    matchLables:
-      app: test
+    matchLabels:
+      app: example-5-nginx
   template:
     metadata:
-      name: python-server
+      labels:
+        app: example-5-nginx
     spec:
       containers:
-      - name: app
-        image: kakaru0/python_server:latest
+      - name: example-5-nginx
+        image: nginx
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "0.1"
         ports:
-        - containerPort: 8000
-    
-  
+        - containerPort: 80
