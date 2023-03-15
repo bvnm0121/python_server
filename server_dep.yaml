@@ -11,7 +11,7 @@ spec:
       app: test
   template:
     metadata:
-      name: python-server
+      labels: test
     spec:
       containers:
       - name: app
