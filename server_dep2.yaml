@@ -9,7 +9,8 @@ spec:
       app: py-test
   template:
     metadata:
-      name: py-test
+      labels:
+        app: py-test
     spec:
       containers:
       - name: py-test
