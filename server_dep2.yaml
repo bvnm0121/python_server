@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: py-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: py-test
+  template:
+    metadata:
+      labels:
+        app: py-test
+    spec:
+      containers:
+      - name: py-test
+        image: kakaru0/python_server:latest
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "0.1"
+        ports:
+        - containerPort: 80
